@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Test Page</title>
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet">
-    <style>
+    <style type="text/css">
     body{
       background-image: url("http://cdn.wonderfulengineering.com/wp-content/uploads/2014/06/galaxy-wallpapers-15.jpg");
      -webkit-background-size: cover;
@@ -16,15 +16,32 @@
      color: white;
     }
     
-  #list{
+    #list{
       color: black;
     }
-      
+    
     </style>
 
+    <script type="text/javascript">
+    var slideimages = new Array()
+    slideimages[0] = new Image()
+    slideimages[0].src ="http://cdn.attackofthecute.com/November-28-2011-19-12-19-1309900255thesefunnyanimals73704.jpeg"
+    slideimages[1] = new Image()
+    slideimages[1].src ="http://www.allemannmachine.com/wp-content/uploads/2014/04/husky.jpeg"
+    slideimages[2] = new Image()
+    slideimages[2].src ="http://puppytoob.toobnetwork.com/wp-content/uploads/sites/3/2015/08/0.jpg"
+    slideimages[3] = new Image()
+    slideimages[3].src ="http://www.skullsunlimited.com/userfiles/image/Husky(1).jpg"
+    slideimages[4] = new Image()
+    slideimages[4].src ="http://fc08.deviantart.net/fs42/i/2009/150/e/a/Cool_Husky_by_sibeworld.jpg"
+    </script>  
+   
+ 
+   
   </head>
+  
   <body>
-      <div class="col-md-4">
+      <div class=".col-xs-6 col-md-4">
         <h1>Hello, World!</h1>
           <div class="btn-group">
             <button type="button" class="btn btn-default">New
@@ -49,7 +66,7 @@
             </div>
             </div>
             
-            <div class="col-md-4" id="list">
+            <div class=".col-xs-6 col-md-4" id="list">
             <ul class="list-group">
                 <li class="list-group-item"><span class="badge">14</span>One</li>
                 <li class="list-group-item"><span class="badge">0</span>Two</li>
@@ -75,18 +92,39 @@
             </div>
             </div>
         
-      <div class="col-md-4">
-      <div class="pics">  
+      <div class=".col-xs-6 col-md-4">
+      
+        <img src="http://cdn.attackofthecute.com/November-28-2011-19-12-19-1309900255thesefunnyanimals73704.jpeg" id="slide" width=350 height=350 >
+        
+      </div>
+      </div>
+      
+      
+   
+   <script type="text/javascript">
 
-        <img src="http://cdn.attackofthecute.com/November-28-2011-19-12-19-1309900255thesefunnyanimals73704.jpeg" name="Image" width="400" height="400">
-        <img src="http://www.allemannmachine.com/wp-content/uploads/2014/04/husky.jpeg" name="Image" width="400" height="400">
-        <img src="http://puppytoob.toobnetwork.com/wp-content/uploads/sites/3/2015/08/0.jpg" name="Image" width="400" height="400">
-        <img src="http://www.skullsunlimited.com/userfiles/image/Husky(1).jpg" name="Image" width="400" height="400">
-        <img src="http://fc08.deviantart.net/fs42/i/2009/150/e/a/Cool_Husky_by_sibeworld.jpg" name="Image" width="400" height="400">
-      </div>
-      </div>
-    </div>
-    
+//variable that will increment through the images
+var step=0
+
+function slideit(){
+ //if browser does not support the image object, exit.
+ if (!document.images)
+  return
+ document.getElementById('slide').src = slideimages[step].src
+ if (step<4)
+  step++
+ else
+  step=0
+ //call function "slideit()" every 2.5 seconds
+ setTimeout("slideit()",2500)
+}
+
+slideit()
+
+</script>
+
+
+
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
   </body>
