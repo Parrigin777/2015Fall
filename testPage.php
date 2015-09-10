@@ -44,21 +44,27 @@
       <div class=".col-xs-6 col-md-4">
         <h1>Hello, World!</h1>
           <div class="btn-group">
-            <button type="button" class="btn btn-default">New
+            <a class="btn btn-success" href="http://fall-2015-parrigin777.c9.io/testPage.php" role="button">Home
+                    <i class="glyphicon glyphicon-home"></i>
+            </a>
+            <a class="btn btn-info" href="http://google.com/" role="button">Search
+                    <i class="glyphicon glyphicon-globe"></i>
+            </a>
+            <button type="button" class="btn btn-primary">New
                     <i class="glyphicon glyphicon-pencil"></i>
             </button>
-            <button type="button" class="btn btn-default">Delete
+            <button type="button" class="btn btn-danger">Delete
                     <i class="glyphicon glyphicon-trash"></i>
             </button>
             
             <div class="btn-group" role="group">
-                <button type="button" class="btn btn-default dropdown-togle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <button type="button" class="btn btn-warning dropdown-togle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
             Dropdown
             <span class="caret"></span>
             </button>
                 <ul class="dropdown-menu">
                     <li><a href="#">Link 1
-                        <i class="glyphicon glyphicon-home"></i></a></li>
+                        <i class="glyphicon glyphicon-off"></i></a></li>
                     <li><a href="#">Link 2
                         <i class="glyphicon glyphicon-cloud"></i></a></li>
                 </ul>
