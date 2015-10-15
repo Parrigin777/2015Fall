@@ -57,9 +57,9 @@ session_start();
             </div>
           </div>
           <div class="form-group">
-            <label class="col-sm-2 control-label" for="txtCallories">Callories</label>
+            <label class="col-sm-2 control-label" for="txtCallories">Amount_Of_Time</label>
             <div class="col-sm-10">
-                  <input type="number" class="form-control" id="txtCallories" name="Callories" placeholder="Hours in Sleep Cycle"  value="<?=$meal['Amount_Of_Time']?>">
+                  <input type="number" class="form-control" id="txtCallories" name="Amount_Of_Time" placeholder="Hours in Sleep Cycle"  value="<?=$meal['Amount_Of_Time']?>">
             </div>
           </div>
           <div class="form-group">

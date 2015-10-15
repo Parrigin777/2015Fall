@@ -84,7 +84,7 @@ session_start();
                 <i class="glyphicon glyphicon-plus"></i>
                 New Record
             </a>
-            <a href="#" class="btn btn-danger">
+            <a href="deleteMeal.php" class="btn btn-danger">
                 <i class="glyphicon glyphicon-trash"></i>
                 Delete All
                 <span class="badge"><?=count($food)?></span>
@@ -136,7 +136,7 @@ session_start();
                 <i class="glyphicon glyphicon-plus"></i>
                 New Record
             </a>
-            <a href="#" class="btn btn-danger">
+            <a href="deleteExcercise.php" class="btn btn-danger">
                 <i class="glyphicon glyphicon-trash"></i>
                 Delete All
                 <span class="badge"><?=count($excercise)?></span>
@@ -189,7 +189,7 @@ session_start();
                 <i class="glyphicon glyphicon-plus"></i>
                 New Record
             </a>
-            <a href="#" class="btn btn-danger">
+            <a href="deleteSleep.php" class="btn btn-danger">
                 <i class="glyphicon glyphicon-trash"></i>
                 Delete All
                 <span class="badge"><?=count($sleep)?></span>
