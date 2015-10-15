@@ -56,7 +56,7 @@ session_start();
 
     <!-- Bootstrap -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
-    
+  
     <style>
       
       body{
@@ -80,7 +80,6 @@ session_start();
                 <li role="presentation" class="active"><a href="sleep.php">Sleep</a></li>
             </ul>
             </div>
-          
             <div class="panel panel-success">
                 <div class="panel-heading">Your Data</div>
                 <div class="panel-body">
@@ -98,35 +97,36 @@ session_start();
                     </dl>
                 </div>
             </div>
-      <div class="row">
+            
+            <div class="row">
         <div class="col-md-8 col-xs-10">
-            <a href="editMeal.php" class="btn btn-success">
+            <a href="editExcercise.php" class="btn btn-success">
                 <i class="glyphicon glyphicon-plus"></i>
                 New Record
             </a>
-            <a href="deleteMeal.php" class="btn btn-danger">
+            <a href="deleteExcercise.php" class="btn btn-danger">
                 <i class="glyphicon glyphicon-trash"></i>
                 Delete All
-                <span class="badge"><?=count($food)?></span>
+                <span class="badge"><?=count($excercise)?></span>
             </a>
             <br />
             <table class="table table-condensed table-bordered table-hover">
               <thead>
                 <tr class="active">
                   <th>#</th>
-                  <th>Name</th>
+                  <th>Type of Exercise</th>
                   <th>Time</th>
-                  <th>Callories</th>
+                  <th>Callories Burned</th>
                 </tr>
               </thead>
               <tbody>
-                <?php foreach($food as $i => $meal): ?>
+                <?php foreach($excercise as $i => $meal): ?>
                 <tr class="info">
                   <th scope="row">
                     <div class="btn-group" role="group" aria-label="...">
                       <a href="" title="View" class="btn btn-default btn-xs"><i class="glyphicon glyphicon-eye-open"></i></a>
-                      <a href="editMeal.php?id=<?=$i?>" title="Edit" class="btn btn-default btn-xs"><i class="glyphicon glyphicon-edit"></i></a>
-                      <a href="deleteMeal.php?id=<?=$i?>" title="Delete" class="btn btn-default btn-xs"><i class="glyphicon glyphicon-trash"></i></a>
+                      <a href="editExcercise.php?id=<?=$i?>" title="Edit" class="btn btn-default btn-xs"><i class="glyphicon glyphicon-edit"></i></a>
+                      <a href="deleteExcercise.php?id=<?=$i?>" title="Delete" class="btn btn-default btn-xs"><i class="glyphicon glyphicon-trash"></i></a>
                     </div>
                   </th>
                   <td><?=$meal['Name']?></td>
@@ -145,8 +145,10 @@ session_start();
             <div class="alert alert-danger" role="alert">
                 Oh no! You messed up.
             </div>
-          </div>  
-          
+
+        </div>
+      </div>
+      
       </div>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
