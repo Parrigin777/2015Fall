@@ -1,9 +1,11 @@
 <?php
 session_start();
-    $name = 'Brandon Parrigin';
-    $message = "Welcome $name";
-    
-    $person = array( 'Name' => $name, 'Age' => 21, CallorieGoal => 2500 );
+   $firstName = 'Brandon';
+    $lastName = 'Parrigin';
+    $message = "Hey $firstName!";
+    $age = '21';
+    $goal = '2500';
+    $person = array( 'Name' => $firstName . ' ' . $lastName, 'Age' => $age, CallorieGoal => $goal );
     
     $food = $_SESSION['food'];
     if(!$food){
@@ -56,29 +58,56 @@ session_start();
 
     <!-- Bootstrap -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
-  
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    <link rel='stylesheet prefetch' href='//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css'>
+    <link rel='stylesheet prefetch' href='https://cdn.rawgit.com/jasny/bootstrap/master/dist/css/jasny-bootstrap.min.css'>
+    <link href="//netdna.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet">
+    <link href="../../dist/css/jasny-bootstrap.min.css" rel="stylesheet">
+   
+    <link href="navmenu-reveal.css" rel="stylesheet">
+    
+   
     <style>
       
       body{
-          background: #B2D1FF !important; ;
+          background: #00FF00 !important; ;
       }
       
       h1{
         font-family: "Times New Roman", Times, serif;
         text-decoration: underline;
-        text-shadow: 2px 2px #E6B800;
+        color: black;
+        
       }
     </style>
   </head>
   <body>
     <div class="container">
+        <div class="row">
+        <div class="col-xs-16 col-md-11">
             <h1><?=$message?></h1>
+        </div>
+        <div class="col-xs-1 col-md-1">
+          <a class="btn btn-primary" href="home.php" role="button">Log Out</a>
+        </div>
+        </div>
             <div class="well well-sm">
+            <div class="row">
+            <div class="col-xs-14 col-md-10">
             <ul class="nav nav-pills">
                 <li role="presentation" class="active"><a href="index.php">Food</a></li>
                 <li role="presentation" class="active"><a href="excercise.php">Excercise</a></li>
                 <li role="presentation" class="active"><a href="sleep.php">Sleep</a></li>
             </ul>
+            </div>
+            <div class="social">
+            <div class="col-xs-4 col-md-2">  
+            <a href="https://www.facebook.com/sharer/sharer.php?u=" title="Share on Facebook" target="_blank" class="btn btn-facebook"><i class="fa fa-facebook"></i></a>
+            <a href="http://twitter.com/home?status=" title="Share on Twitter" target="_blank" class="btn btn-twitter"><i class="fa fa-twitter"></i></a>
+            <a href="https://plus.google.com/share?url=" title="Share on Google+" target="_blank" class="btn btn-googleplus"><i class="fa fa-google-plus"></i></a>
+            </div>
+            </div>
+            </div>
             </div>
             <div class="panel panel-success">
                 <div class="panel-heading">Your Data</div>
@@ -97,6 +126,7 @@ session_start();
                     </dl>
                 </div>
             </div>
+            
             
             <div class="row">
         <div class="col-md-8 col-xs-10">
@@ -138,15 +168,21 @@ session_start();
             </table>  
           
         </div>
-        <div class="col-md-4 col-xs-10">
-            <div class="alert alert-success" role="alert">
-                You did well
+        
+        <div class="col-xs-6 col-md-3 col-md-offset-1 col-xs-offset-1"> 
+            <div class="demo">
+              <span class="twitter-typeahead" style="position: relative; display: inline-block;">
+                <input class="typeahead tt-hint" type="text" readonly="" autocomplete="off" spellcheck="false" tabindex="-1" dir="ltr" style="position: absolute; top: 0px; left: 0px; border-color: transparent; box-shadow: none; opacity: 1; background: none 0% 0% / auto repeat scroll padding-box border-box rgb(255, 255, 255);">
+                <input class="typeahead tt-input" type="text" placeholder="Excercises" autocomplete="off" spellcheck="false" dir="auto" style="position: relative; vertical-align: top; background-color: transparent;">
+                <pre aria-hidden="true" style="position: absolute; visibility: hidden; white-space: pre; font-family: Arial; font-size: 24px; font-style: normal; font-variant: normal; font-weight: 400; word-spacing: 0px; letter-spacing: 0px; text-indent: 0px; text-rendering: auto; text-transform: none;"></pre>
+                <div class="tt-menu" style="position: absolute; top: 100%; left: 0px; z-index: 100; display: none;">
+                  <div class="tt-dataset tt-dataset-states">
+                  </div>
+                </div>
+                </span>
             </div>
-            <div class="alert alert-danger" role="alert">
-                Oh no! You messed up.
-            </div>
-
         </div>
+        
       </div>
       
       </div>

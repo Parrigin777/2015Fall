@@ -1,0 +1,73 @@
++++++++++++++++++++++++++++++++++++++++++++++++++++
+CREATING A DATABASE
+
+create database test;
+
++++++++++++++++++++++++++++++++++++++++++++++++++++
+USING A DATABASE
+
+using test;
+
++++++++++++++++++++++++++++++++++++++++++++++++++++
+CREATING A TABLE
+
+create table activities (
+id INT PRIMARY KEY NOT NULL AUTO_INCREMENT,
+activity varchar(30),
+description varchar(100)
+);
+
+where id is a number that will be automatically incremented when a new record is added to the table
+    it cannot be null
+    it must be a key in order to be auto incremented (i believe)
+& where email/activity/description are strings
+
+
++++++++++++++++++++++++++++++++++++++++++++++++++++
+INSERTING RECORDS TO TABLE
+
+insert into activity (email, activity, description)     //**
+    VALUES (                                            //****
+    "fake@email",
+    "jogging",
+    "why would you need an explanation about running you fools"
+    );
+    
+these can be all one line, but breaking them out with newlines can help you visualize stuff
+you have to 
+    ** declare which variables you are inputting
+and then
+    **** show what those variable will be
+    
+DO NOT INCLUDE THE "//**"'s IN YOUR COMMAND
+
+values that are declared 'NOT NULL' in a table's creation must have a value when a new record is given to them
+the only exception is when you have an auto increment key as a part of the table,
+since it will take care of this for you
+
++++++++++++++++++++++++++++++++++++++++++++++++++++
+DELETING ENTRIES
+
+delete from activities where email = "fake@email";
+
+will erase the above entry
+
++++++++++++++++++++++++++++++++++++++++++++++++++++
+DELETING TABLES
+
+USE WITH EXTREME CAUTION
+USE WITH EXTREME CAUTION
+drop table activities;
+USE WITH EXTREME CAUTION
+USE WITH EXTREME CAUTION
+USE WITH EXTREME CAUTION
+    there is no warning about dropping a table
+    it just happens
+    
++++++++++++++++++++++++++++++++++++++++++++++++++++
+finally, no commands are given to your database until you include a semicolon ';'
+which is what lets us break up commands like i did up in the 'inserting' part
+
+ONLY IN C9
+to enter the mysql command line
+enter "mysql-ctl cli" into bash
